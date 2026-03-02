@@ -1,131 +1,180 @@
-# Business Insights 360 – Power BI Project
+# 📊 Business Insights 360 – Enterprise BI Solution (Power BI)
 
-**Tools Used:** Power BI • MySQL • Excel • DAX • Power Query • Data Modeling  
+## 📌 Project Overview
 
-An end-to-end **Business Intelligence dashboard** built for **AtliQ Hardware**, delivering actionable insights across Finance, Sales, Marketing, Supply Chain, and Executive Management.
+Business Insights 360 is an end-to-end Business Intelligence solution developed for AtliQ Hardware to centralize reporting across Finance, Sales, Marketing, Supply Chain, and Executive Management.
+
+The solution integrates multiple data sources into a unified Power BI model, enabling cross-functional KPI monitoring, profitability analysis, and strategic performance tracking.
+
+This project demonstrates enterprise-level BI development, data modeling, and decision-support dashboard design.
+
+---
+
+## 🛠 Tools & Technologies
+
+- Power BI  
+- DAX  
+- Power Query (ETL)  
+- MySQL  
+- Microsoft Excel  
+- Star Schema Data Modeling  
 
 ---
 
 ## 🌐 Live Interactive Dashboard
-👉 **[View Live Dashboard](https://tinyurl.com/5n73v3a3)**  
+
+🔗 **View Live Dashboard:**  
+https://lnkd.in/emEfiPix  
 
 ---
 
-## 🧭 Overview
-Business Insights 360 helps stakeholders monitor key performance indicators, identify trends, and make **data-driven decisions** through interactive dashboards.
+# 🎯 Business Objectives
 
-This project demonstrates real-world **Data Analyst and BI Developer skills**, including:
-- Data integration from multiple sources  
-- Data modeling (star schema)  
-- DAX measures and calculations  
-- Interactive dashboard design  
+- Consolidate fragmented reports into a centralized BI system  
+- Provide real-time KPI visibility across departments  
+- Enable profitability and forecast accuracy tracking  
+- Support executive-level strategic decision-making  
+- Improve reporting efficiency and clarity  
 
 ---
 
-## 🖼️ Dashboard Preview
+# 🏗 Data Architecture & Modeling
 
-### 🏠 Home View
+- Designed a **star schema model** using fact and dimension tables  
+- Integrated structured data from MySQL and Excel sources  
+- Built optimized relationships to improve performance  
+- Created reusable DAX measures for standardized KPI calculation  
+
+The data model supports scalable reporting across multiple business functions while maintaining performance efficiency.
+
+---
+
+# 📊 Dashboard Views & Functional Capabilities
+
+---
+
+## 🏠 Home View
 ![Home Dashboard](Dashboard%20Screenshots/Home.png)
 
-### 💰 Finance View
+Central navigation hub providing a snapshot of key company-wide KPIs and access to all functional dashboards.
+
+---
+
+## 💰 Finance View
 ![Finance Dashboard](Dashboard%20Screenshots/Finance%20View.png)
 
-### 📈 Sales View
+### Features:
+- Profit & Loss statement analysis  
+- Revenue, cost, and margin tracking  
+- Financial benchmarking across time periods  
+
+### Decision Support Enabled:
+- Identify margin compression trends  
+- Monitor cost structure changes  
+- Track financial health over time  
+
+---
+
+## 📈 Sales View
 ![Sales Dashboard](Dashboard%20Screenshots/Sales%20View.png)
 
-### 🎯 Marketing View
-![Marketing Dashboard](Dashboard%20Screenshots/Marketing%20View.png)
-
-### 🚚 Supply Chain View
-![Supply Chain Dashboard](Dashboard%20Screenshots/Supply%20Chain%20View.png)
-
-### 🏢 Executive View
-![Executive Dashboard](Dashboard%20Screenshots/Executive%20View.png)
----
-
-## 🚀 Dashboard Features
-
-### 💰 Finance View
-- Profit & Loss statement analysis  
-- Revenue, expenses, and profit margin tracking  
-- Financial benchmarking  
-
-### 📈 Sales View
+### Features:
 - Customer and product performance analysis  
 - Net sales and gross margin insights  
-- Profitability and growth matrix  
+- Profitability matrix (growth vs margin analysis)  
 
-### 🎯 Marketing View
+### Decision Support Enabled:
+- Identify high-value customer segments  
+- Detect underperforming products  
+- Support revenue growth strategies  
+
+---
+
+## 🎯 Marketing View
+![Marketing Dashboard](Dashboard%20Screenshots/Marketing%20View.png)
+
+### Features:
 - Product and segment profitability analysis  
 - Market performance tracking  
-- ROI insights  
+- ROI visibility across categories  
 
-### 🚚 Supply Chain View
+### Decision Support Enabled:
+- Evaluate marketing effectiveness  
+- Align marketing investment with profitability  
+- Optimize product positioning  
+
+---
+
+## 🚚 Supply Chain View
+![Supply Chain Dashboard](Dashboard%20Screenshots/Supply%20Chain%20View.png)
+
+### Features:
 - Forecast accuracy monitoring  
-- Net error and risk analysis  
-- Supply chain performance tracking  
+- Net error and deviation analysis  
+- Operational performance tracking  
 
-### 🏢 Executive View
-- High-level KPI dashboard  
+### Decision Support Enabled:
+- Detect forecast deviation risks  
+- Improve demand planning accuracy  
+- Reduce operational inefficiencies  
+
+---
+
+## 🏢 Executive View
+![Executive Dashboard](Dashboard%20Screenshots/Executive%20View.png)
+
+### Features:
+- High-level KPI summary  
 - Revenue, profit, and forecast accuracy overview  
-- Executive decision-support insights  
+- Cross-functional performance visibility  
+
+### Decision Support Enabled:
+- Enable strategic planning discussions  
+- Monitor overall company alignment  
+- Support executive-level performance reviews  
 
 ---
 
-## 🏆 Key Highlights
-- 🔗 Integrated multiple data sources (**MySQL, Excel, CSV**)  
-- 📊 Built interactive dashboards using **Power BI and DAX**  
-- ⚡ Optimized data model for performance  
-- 🎨 Designed executive-friendly UI and navigation  
-- 📈 Enabled KPI tracking and business performance analysis  
+# 📈 Key Highlights
+
+- Integrated multiple structured data sources (MySQL, Excel)  
+- Designed scalable star schema data model  
+- Built advanced DAX measures for profitability & forecasting analysis  
+- Created interactive drill-down dashboards  
+- Delivered executive-ready reporting interface  
+- Reduced dependency on fragmented manual reports  
 
 ---
 
-## 📂 Data Sources
+# 📂 Data Sources
 
 | Source | Description |
-|------|-------------|
+|--------|-------------|
 | MySQL Database | Fact and dimension tables |
-| Excel / CSV | Targets, benchmarks, and supporting data |
+| Excel / CSV Files | Targets, benchmarks, and supplementary metrics |
 
 ---
 
-## 🛠️ Technical Skills Demonstrated
+# 🧠 Skills Demonstrated
+
 - Power BI Dashboard Development  
 - Data Modeling (Star Schema)  
-- DAX Calculations  
-- Power Query (ETL)  
-- KPI Dashboard Design  
-- Business Intelligence & Data Visualization
-
-
----
-
-## 📁 Project Structure
- business-insights-360-powerbi
-│
-├── screenshots
-│ ├── home.png
-│ ├── finance-view.png
-│ ├── sales-view.png
-│ ├── marketing-view.png
-│ ├── supply-chain-view.png
-│ └── executive-view.png
-│
-└── README.md
-
-
+- Advanced DAX Calculations  
+- Power Query (ETL & Data Cleaning)  
+- KPI Framework Design  
+- Cross-Functional Business Analysis  
+- Executive Reporting Design  
 
 ---
 
-## 👤 Author
+# 👤 Author
+
 **Krithesh**  
-Aspiring Data Analyst | Power BI Developer  
+Data Analyst | Business Intelligence  
 
+📧 Email: krithesh.data@gmail.com  
 🔗 LinkedIn: https://www.linkedin.com/in/krithesh-analyst/  
-🔗 Portfolio: https://tinyurl.com/5n73v3a3  
 
 ---
 
-## ⭐ Support
-If you found this project useful, please consider giving it a **star ⭐**
+If you found this project valuable, consider giving it a ⭐.
