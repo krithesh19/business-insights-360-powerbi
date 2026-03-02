@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-Business Insights 360 is an end-to-end Business Intelligence solution developed for AtliQ Hardware to centralize reporting across Finance, Sales, Marketing, Supply Chain, and Executive Management.
+Business Insights 360 is an end-to-end Business Intelligence solution developed for AtliQ Hardware to **centralize reporting across Finance, Sales, Marketing, Supply Chain, and Executive Management**.
 
 The solution integrates multiple data sources into a unified Power BI model, enabling cross-functional KPI monitoring, profitability analysis, and strategic performance tracking.
 
