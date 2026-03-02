@@ -25,23 +25,22 @@ This project demonstrates real-world **Data Analyst and BI Developer skills**, i
 ## 🖼️ Dashboard Preview
 
 ### 🏠 Home View
-![Home Dashboard](screenshots/home.png)
+![Home Dashboard](Dashboard%20Screenshots/Home.png)
 
 ### 💰 Finance View
-![Finance Dashboard](screenshots/finance-view.png)
+![Finance Dashboard](Dashboard%20Screenshots/Finance%20View.png)
 
 ### 📈 Sales View
-![Sales Dashboard](screenshots/sales-view.png)
+![Sales Dashboard](Dashboard%20Screenshots/Sales%20View.png)
 
 ### 🎯 Marketing View
-![Marketing Dashboard](screenshots/marketing-view.png)
+![Marketing Dashboard](Dashboard%20Screenshots/Marketing%20View.png)
 
 ### 🚚 Supply Chain View
-![Supply Chain Dashboard](screenshots/supply-chain-view.png)
+![Supply Chain Dashboard](Dashboard%20Screenshots/Supply%20Chain%20View.png)
 
 ### 🏢 Executive View
-![Executive Dashboard](screenshots/executive-view.png)
-
+![Executive Dashboard](Dashboard%20Screenshots/Executive%20View.png)
 ---
 
 ## 🚀 Dashboard Features
