@@ -1,180 +1,249 @@
-# 📊 Business Insights 360 – Enterprise BI Solution (Power BI)
+# 📊 Business Insights 360
+### Enterprise Business Intelligence Solution — Power BI
 
-## 📌 Project Overview
+<div align="center">
 
-Business Insights 360 is an end-to-end Business Intelligence solution developed for AtliQ Hardware to **centralize reporting across Finance, Sales, Marketing, Supply Chain, and Executive Management**.
+[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![DAX](https://img.shields.io/badge/DAX-FF6B35?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/dax/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/excel)
+[![Power Query](https://img.shields.io/badge/Power%20Query-742774?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/power-query/)
 
-The solution integrates multiple data sources into a unified Power BI model, enabling cross-functional KPI monitoring, profitability analysis, and strategic performance tracking.
+<br/>
 
-This project demonstrates enterprise-level BI development, data modeling, and decision-support dashboard design.
+### 🔗 [VIEW LIVE DASHBOARD →](https://app.powerbi.com/view?r=eyJrIjoiODcyZmU4YjAtZTM3Ny00MzhlLWJhOWYtZGNmZWExYzExNGU4IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
----
+<br/>
 
-## 🛠 Tools & Technologies
+> End-to-end BI solution for **AtliQ Hardware** — consolidating Finance, Sales, Marketing,  
+> Supply Chain, and Executive reporting into a single interactive platform.
 
-- Power BI  
-- DAX  
-- Power Query (ETL)  
-- MySQL  
-- Microsoft Excel  
-- Star Schema Data Modeling  
-
----
-
-## 🌐 Live Interactive Dashboard
-
-🔗 **View Live Dashboard:**  
-https://lnkd.in/emEfiPix  
+</div>
 
 ---
 
-# 🎯 Business Objectives
+## 🗺️ Navigation
 
-- Consolidate fragmented reports into a centralized BI system  
-- Provide real-time KPI visibility across departments  
-- Enable profitability and forecast accuracy tracking  
-- Support executive-level strategic decision-making  
-- Improve reporting efficiency and clarity  
-
----
-
-# 🏗 Data Architecture & Modeling
-
-- Designed a **star schema model** using fact and dimension tables  
-- Integrated structured data from MySQL and Excel sources  
-- Built optimized relationships to improve performance  
-- Created reusable DAX measures for standardized KPI calculation  
-
-The data model supports scalable reporting across multiple business functions while maintaining performance efficiency.
+| | Section |
+|--|---------|
+| 📖 | [Overview](#-overview) |
+| 🏗️ | [Data Architecture](#️-data-architecture) |
+| 📐 | [DAX Measures](#-key-dax-measures) |
+| 📊 | [Dashboard Views](#-dashboard-views) |
+| 🎯 | [Business Value](#-business-value-delivered) |
+| ⚙️ | [Tech Stack](#️-tech-stack) |
+| 👤 | [Author](#-author) |
 
 ---
 
-# 📊 Dashboard Views & Functional Capabilities
+## 📖 Overview
+
+AtliQ Hardware operates across multiple markets and customer segments globally. Their reporting was fragmented across departments — Finance, Sales, Marketing, Supply Chain, and Executive — making cross-functional decisions slow and unreliable.
+
+**Business Insights 360** replaces this with a single, unified Power BI platform:
+
+```
+MySQL + Excel  →  Power Query ETL  →  Star Schema Model  →  DAX Measures  →  6 Interactive Views
+```
+
+- **1 unified platform** replacing 5 separate department reports
+- **6 interactive dashboard views** with drill-down capability
+- **Live on Power BI Service** — accessible to stakeholders anywhere
+- **Star schema model** optimised for cross-filter performance
 
 ---
 
-## 🏠 Home View
-![Home Dashboard](Dashboard%20Screenshots/Home.png)
+## 🏗️ Data Architecture
 
-Central navigation hub providing a snapshot of key company-wide KPIs and access to all functional dashboards.
+### Star Schema Design
 
----
+```
+                    ┌─────────────┐
+                    │  dim_date   │
+                    └──────┬──────┘
+                           │
+┌──────────────┐    ┌──────┴──────────────┐    ┌───────────────┐
+│ dim_customer │────│  fact_sales_monthly  │────│  dim_product  │
+└──────────────┘    └──────┬──────────────┘    └───────────────┘
+                           │
+┌──────────────┐    ┌──────┴──────────────────┐
+│  dim_market  │────│ fact_forecast_monthly    │
+└──────────────┘    └─────────────────────────┘
+```
 
-## 💰 Finance View
-![Finance Dashboard](Dashboard%20Screenshots/Finance%20View.png)
+### Data Sources
 
-### Features:
-- Profit & Loss statement analysis  
-- Revenue, cost, and margin tracking  
-- Financial benchmarking across time periods  
+| Source | Tables | Contents |
+|--------|--------|----------|
+| **MySQL** | fact_sales_monthly | Transactional sales data |
+| **MySQL** | fact_forecast_monthly | Demand forecast data |
+| **MySQL** | dim_customer, dim_product, dim_market, dim_date | Reference dimensions |
+| **Excel / CSV** | Targets | Sales targets and benchmarks |
+| **Excel / CSV** | Market Share | Competitive benchmarks |
+| **Excel / CSV** | OpEx | Operational expense data |
 
-### Decision Support Enabled:
-- Identify margin compression trends  
-- Monitor cost structure changes  
-- Track financial health over time  
-
----
-
-## 📈 Sales View
-![Sales Dashboard](Dashboard%20Screenshots/Sales%20View.png)
-
-### Features:
-- Customer and product performance analysis  
-- Net sales and gross margin insights  
-- Profitability matrix (growth vs margin analysis)  
-
-### Decision Support Enabled:
-- Identify high-value customer segments  
-- Detect underperforming products  
-- Support revenue growth strategies  
-
----
-
-## 🎯 Marketing View
-![Marketing Dashboard](Dashboard%20Screenshots/Marketing%20View.png)
-
-### Features:
-- Product and segment profitability analysis  
-- Market performance tracking  
-- ROI visibility across categories  
-
-### Decision Support Enabled:
-- Evaluate marketing effectiveness  
-- Align marketing investment with profitability  
-- Optimize product positioning  
+### Why Star Schema?
+- **Performance** — fewer joins = faster query execution in Power BI
+- **Clarity** — clean separation of facts (what happened) vs dimensions (who/what/when/where)
+- **Scalability** — new fact tables can be added without restructuring the model
 
 ---
 
-## 🚚 Supply Chain View
-![Supply Chain Dashboard](Dashboard%20Screenshots/Supply%20Chain%20View.png)
+## 📐 Key DAX Measures
 
-### Features:
-- Forecast accuracy monitoring  
-- Net error and deviation analysis  
-- Operational performance tracking  
+```dax
+-- ── Revenue ──────────────────────────────────────────────────────────
 
-### Decision Support Enabled:
-- Detect forecast deviation risks  
-- Improve demand planning accuracy  
-- Reduce operational inefficiencies  
+Net Sales = SUM(fact_sales_monthly[net_sales_amount])
 
----
+Gross Margin = SUM(fact_sales_monthly[gross_margin])
 
-## 🏢 Executive View
-![Executive Dashboard](Dashboard%20Screenshots/Executive%20View.png)
+-- ── Profitability ────────────────────────────────────────────────────
 
-### Features:
-- High-level KPI summary  
-- Revenue, profit, and forecast accuracy overview  
-- Cross-functional performance visibility  
+GM % = DIVIDE([Gross Margin], [Net Sales], 0)
+-- DIVIDE used instead of "/" to handle division by zero gracefully
 
-### Decision Support Enabled:
-- Enable strategic planning discussions  
-- Monitor overall company alignment  
-- Support executive-level performance reviews  
+Net Profit % = DIVIDE([Net Profit], [Net Sales], 0)
 
----
+-- ── Supply Chain ─────────────────────────────────────────────────────
 
-# 📈 Key Highlights
+Forecast Accuracy % =
+    1 - DIVIDE(
+        SUMX(
+            fact_forecast_monthly,
+            ABS(fact_forecast_monthly[forecast_qty] - fact_forecast_monthly[sold_qty])
+        ),
+        SUMX(fact_forecast_monthly, fact_forecast_monthly[forecast_qty]),
+        0
+    )
+-- SUMX iterates row by row to compute absolute error per product
+-- ABS ensures over/under forecast both count as error
 
-- Integrated multiple structured data sources (MySQL, Excel)  
-- Designed scalable star schema data model  
-- Built advanced DAX measures for profitability & forecasting analysis  
-- Created interactive drill-down dashboards  
-- Delivered executive-ready reporting interface  
-- Reduced dependency on fragmented manual reports  
+Net Error =
+    SUM(fact_forecast_monthly[forecast_qty])
+    - SUM(fact_forecast_monthly[sold_qty])
+-- Positive = over-forecast, Negative = under-forecast
+```
 
----
-
-# 📂 Data Sources
-
-| Source | Description |
-|--------|-------------|
-| MySQL Database | Fact and dimension tables |
-| Excel / CSV Files | Targets, benchmarks, and supplementary metrics |
+> 💡 All measures are centralised in a dedicated **_Measures** table for reusability and maintainability.
 
 ---
 
-# 🧠 Skills Demonstrated
+## 📊 Dashboard Views
 
-- Power BI Dashboard Development  
-- Data Modeling (Star Schema)  
-- Advanced DAX Calculations  
-- Power Query (ETL & Data Cleaning)  
-- KPI Framework Design  
-- Cross-Functional Business Analysis  
-- Executive Reporting Design  
+### 🏠 Home View
+![Home](Dashboard%20Screenshots/Home.png)
+
+Central navigation hub providing a company-wide KPI snapshot and one-click access to all functional dashboards.
 
 ---
 
-# 👤 Author
+### 💰 Finance View
+![Finance View](Dashboard%20Screenshots/Finance%20View.png)
 
-**Krithesh**  
-Data Analyst | Business Intelligence  
+| Feature | Description |
+|---------|-------------|
+| P&L Statement | Full profit & loss with revenue, COGS, gross margin, net profit |
+| Benchmarking | Year-over-year and vs target comparison |
+| Trend Analysis | Monthly financial performance over time |
 
-📧 Email: krithesh.data@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/krithesh-analyst/  
+**Decision support:** Identify margin compression, monitor cost structure changes, track financial health.
 
 ---
 
-If you found this project valuable, consider giving it a ⭐.
+### 📈 Sales View
+![Sales View](Dashboard%20Screenshots/Sales%20View.png)
+
+| Feature | Description |
+|---------|-------------|
+| Customer Matrix | Net sales and gross margin by customer |
+| Product Performance | Revenue contribution by product segment |
+| Profitability Scatter | Growth vs margin quadrant analysis |
+
+**Decision support:** Identify high-value customers, detect underperforming products, prioritise revenue growth.
+
+---
+
+### 🎯 Marketing View
+![Marketing View](Dashboard%20Screenshots/Marketing%20View.png)
+
+| Feature | Description |
+|---------|-------------|
+| Segment Profitability | GM % by product category and region |
+| Market Performance | Sales performance across geographies |
+| ROI Visibility | Marketing investment vs revenue return |
+
+**Decision support:** Evaluate campaign effectiveness, align spend with profitable segments.
+
+---
+
+### 🚚 Supply Chain View
+![Supply Chain View](Dashboard%20Screenshots/Supply%20Chain%20View.png)
+
+| Feature | Description |
+|---------|-------------|
+| Forecast Accuracy % | How closely forecasts matched actual sales |
+| Net Error | Over/under forecast by product and customer |
+| Risk Flags | Products with consistently poor forecast accuracy |
+
+**Decision support:** Reduce stockouts and overstock, improve demand planning, cut operational waste.
+
+---
+
+### 🏢 Executive View
+![Executive View](Dashboard%20Screenshots/Executive%20View.png)
+
+| Feature | Description |
+|---------|-------------|
+| KPI Summary | Revenue, GM %, Net Profit %, Forecast Accuracy in one view |
+| Market Share | AtliQ vs competitors by region |
+| Top Performers | Top 5 customers and products by revenue |
+
+**Decision support:** Board-level performance reviews, strategic planning, cross-functional alignment.
+
+---
+
+## 🎯 Business Value Delivered
+
+```
+BEFORE                              AFTER
+──────────────────────────────      ──────────────────────────────
+5 separate department reports  →    1 unified BI platform
+Manual Excel updates           →    Live Power BI Service dashboard
+No cross-functional view       →    Drill-down from exec to detail
+Slow forecast reconciliation   →    Automated accuracy tracking
+Ad-hoc margin queries          →    Always-on GM % by segment
+```
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| **Visualisation** | Power BI Desktop | Dashboard design and development |
+| **Publishing** | Power BI Service | Live deployment and stakeholder sharing |
+| **Calculations** | DAX | KPI measures, profitability metrics |
+| **ETL** | Power Query (M) | Data cleaning, transformation, shaping |
+| **Database** | MySQL | Fact and dimension tables |
+| **Supplementary** | Excel / CSV | Targets, benchmarks, OpEx |
+| **Modelling** | Star Schema | Optimised relational data model |
+
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Kritheshvar Vinothkumar**
+MSc Data & Computational Science — University College Dublin
+
+[![GitHub](https://img.shields.io/badge/GitHub-krithesh19-181717?style=for-the-badge&logo=github)](https://github.com/krithesh19)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-krithesh--analyst-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/krithesh-analyst/)
+[![Email](https://img.shields.io/badge/Email-krithesh.data@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krithesh.data@gmail.com)
+
+---
+
+*If you found this project useful, consider giving it a ⭐*
+
+</div>
